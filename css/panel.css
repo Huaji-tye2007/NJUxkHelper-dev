@@ -1,0 +1,195 @@
+/* NJU选课助手 - 信息面板样式 */
+.njxk-panel {
+    position: absolute;
+    z-index: 2147483647;
+    width: 360px;
+    max-height: 60vh;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.njxk-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background: #fafafa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04)
+}
+
+.njxk-tabs {
+    display: flex;
+    gap: 8px
+}
+
+.njxk-tabs button {
+    background: none;
+    border: 0;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333
+}
+
+.njxk-tabs button.njxk-active {
+    font-weight: 600;
+    border-bottom: 2px solid #790fe9
+}
+
+.njxk-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
+.njxk-close {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0
+}
+
+.njxk-close:hover {
+    background: #e8e8e8;
+    border-color: #bbb;
+    color: #333
+}
+
+.njxk-close:active {
+    background: #ddd;
+    border-color: #999;
+    transform: scale(0.95)
+}
+
+.njxk-favorite {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0
+}
+
+.njxk-favorite:hover {
+    background: #e8e8e8;
+    border-color: #bbb;
+    color: #333
+}
+
+.njxk-favorite:active {
+    background: #ddd;
+    border-color: #999;
+    transform: scale(0.95)
+}
+
+.njxk-favorite.favorited {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #856404
+}
+
+.njxk-favorite.favorited:hover {
+    background: #fff3cd;
+    border-color: #ffb300;
+    color: #664d03
+}
+
+.njxk-favorite.favorited:active {
+    background: #ffeaa7;
+    border-color: #ff9500;
+    transform: scale(0.95)
+}
+
+.njxk-content {
+    overflow: auto;
+    max-height: calc(60vh - 48px);
+    padding: 8px
+}
+
+.njxk-card {
+    padding: 8px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    margin-bottom: 8px
+}
+
+.njxk-card-year {
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+    margin-bottom: 6px
+}
+
+.njxk-card-text {
+    font-size: 14px;
+    color: #222;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    text-align: left
+}
+
+.njxk-card-diff {
+    font-size: 13px;
+    color: #d32f2f;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    line-height: 1.3
+}
+
+.njxk-card-match {
+    font-size: 11px;
+    color: #888;
+    margin-top: 4px;
+    font-style: italic
+}
+
+.njxk-match-exact {
+    color: #2e7d32
+}
+
+.njxk-match-normalized {
+    color: #1976d2
+}
+
+.njxk-match-contains {
+    color: #f57c00
+}
+
+.njxk-match-regex-fuzzy {
+    color: #9c27b0
+}
+
+.njxk-match-similarity {
+    color: #6f069d
+}
+
+.njxk-empty {
+    padding: 18px;
+    color: #666;
+    text-align: center
+}

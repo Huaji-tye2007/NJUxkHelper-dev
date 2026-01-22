@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "南京大学选课小助手",
+    "version": "1.0.0",
+    "description": "为南京大学学生提供课程评价信息，帮助更好地选择课程",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://xk.nju.edu.cn/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://xk.nju.edu.cn/*"
+            ],
+            "js": [
+                "js/dataStore.js",
+                "js/favorites.js",
+                "js/panel-inject.js",
+                "js/content-script.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "normalized_data/*.json",
+                "css/*.css"
+            ],
+            "matches": [
+                "https://xk.nju.edu.cn/*"
+            ]
+        }
+    ],
+    "action": {
+        "default_title": "南京大学选课小助手",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    }
+}

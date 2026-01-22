@@ -1,0 +1,5 @@
+/* NJU选课助手 - 通用样式 */
+.njxk-clickable-link {
+    cursor: pointer;
+    text-decoration: underline;
+}

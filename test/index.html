@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NJUXK Test Page</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;padding:20px}
+    table{border-collapse:collapse;width:800px}
+    td{border:1px solid #ddd;padding:8px}
+  </style>
+</head>
+<body>
+  <h2>测试页面 — 模拟课程列表</h2>
+  <table>
+    <thead><tr><th>课程</th><th>教师</th></tr></thead>
+    <tbody>
+      <tr class="course-tr">
+        <td class="kcmc">羽毛球初级</td>
+        <td class="jsmc">邵力平</td>
+      </tr>
+      <tr class="course-tr">
+        <td class="kcmc">健美</td>
+        <td class="jsmc">陈思远</td>
+      </tr>
+      <tr class="course-tr">
+            <td class="kcmc">计算机程序的构造和解释</td>
+            <td class="jsmc">冯新宇，李樾</td>
+      </tr>
+      <tr class="course-tr">
+            <td class="kcmc">数学分析（AI/信计）</td>
+            <td class="jsmc">范红军</td>
+        </tr>
+        <tr class="course-tr">
+            <td class="kcmc">数学分析（星层次）</td>
+            <td class="jsmc">石亚龙</td>
+        </tr>
+        <tr class="course-tr">
+            <td class="kcmc">微积分I（第一层次）</td>
+            <td class="jsmc">陆宏</td>
+        </tr>
+        <tr class="course-tr">
+            <td class="kcmc">《意大利文艺复兴时期的文化》阅读</td>
+            <td class="jsmc">	闵凡祥</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <!-- stub chrome.runtime.getURL for testing (return absolute path from server root) -->
+  <script>
+    window.chrome = { runtime: { getURL: p => ('/' + p.replace(/^\/+/, '')) } };
+  </script>
+
+  <!-- load real modules from repo -->
+  <script src="/js/dataStore.js"></script>
+  <script src="/js/content-script.js"></script>
+  <script src="/js/panel-inject.js"></script>
+  <script src="/js/favorites.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* NJU选课助手 - 收藏功能样式 */
+.njxk-favorites-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    z-index: 2147483648;
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow: hidden
+}
+
+.njxk-favorites-panel.dragging {
+    transition: none
+}
+
+.njxk-favorites-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: #790fe9;
+    color: white;
+    cursor: move;
+    user-select: none
+}
+
+.njxk-favorites-title {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px
+}
+
+.njxk-favorites-toggle {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease
+}
+
+.njxk-favorites-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5)
+}
+
+.njxk-favorites-content {
+    max-height: 300px;
+    overflow-y: auto;
+    border-top: 1px solid #eee;
+    transition: max-height 0.3s ease
+}
+
+.njxk-favorites-content.collapsed {
+    max-height: 0;
+    overflow: hidden
+}
+
+.njxk-favorites-table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.njxk-favorites-table th {
+    background: #f5f5f5;
+    padding: 8px 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 1px solid #ddd
+}
+
+.njxk-favorites-table td {
+    padding: 6px;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.njxk-favorite-course,
+.njxk-favorite-teacher {
+    color: #333;
+    font-weight: 500
+}
+
+.njxk-favorites-remove {
+    background: #fff3f3;
+    border: 1px solid #ffcccc;
+    color: #d32f2f;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-width: 24px;
+    text-align: center
+}
+
+.njxk-favorites-remove:hover {
+    background: #ffebee;
+    border-color: #ffaaaa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(211, 47, 47, 0.2)
+}
+
+.njxk-favorites-empty {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 13px
+}

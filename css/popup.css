@@ -1,0 +1,109 @@
+/* NJU选课助手 - Popup页面样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f8f9fa;
+}
+
+.popup-container {
+    width: 320px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.popup-header {
+    background: linear-gradient(135deg, #790fe9, #9c27b0);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.popup-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 8px 0;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-label {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 13px;
+    color: #333;
+    font-weight: 400;
+}
+
+.popup-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 12px 20px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.author {
+    color: #666;
+    font-weight: 500;
+}
+
+.separator {
+    margin: 0 8px;
+    color: #ccc;
+}
+
+.footer-link {
+    color: #790fe9;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #5e0eb3;
+    text-decoration: underline;
+}
+
+.footer-link:active {
+    color: #4a0a8f;
+}
+
+/* 响应式调整 */
+@media (max-width: 340px) {
+    .popup-container {
+        width: 280px;
+    }
+
+    .footer-links {
+        font-size: 10px;
+    }
+
+    .separator {
+        margin: 0 6px;
+    }
+}
