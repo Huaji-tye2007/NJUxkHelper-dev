@@ -71,7 +71,21 @@ function serve() {
 
     // wait for panel
     await page.waitForSelector('.njxk-panel', { timeout: 5000 });
-    console.log('Panel shown');
+    console.log('Panel shown for standard row');
+
+    // TEST: Program Course (JXB Item)
+    console.log('Testing JXB Item enhancement...');
+    // check if jxb item is enhanced
+    const jxbLink = await page.waitForSelector('.jxb-item[data-enhanced="true"] .head .jxb-title a.njxk-clickable-link', { timeout: 5000 });
+    if (!jxbLink) throw new Error('JXB item teacher link not found');
+    console.log('JXB item teacher link found');
+
+    // click JXB teacher link
+    await page.click('.jxb-item[data-enhanced="true"] .head .jxb-title a.njxk-clickable-link');
+
+    // wait for panel again (it might be already shown, but we want to make sure it's updated or still visible)
+    await page.waitForSelector('.njxk-panel', { timeout: 5000 });
+    console.log('Panel shown for JXB teacher');
 
     // screenshot
     const out = path.join(ROOT, 'test', 'screenshot.png');

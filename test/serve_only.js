@@ -24,7 +24,7 @@ function serve() {
                 }
             });
         });
-        server.listen(PORT, () => resolve(server));
+        server.listen(PORT, '0.0.0.0', () => resolve(server));
     });
 }
 

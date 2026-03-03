@@ -20,8 +20,7 @@
 - **一键收藏**：点击面板右上角⭐按钮即可收藏心仪课程
 - **收藏夹管理**：统一管理所有收藏的课程信息
 - **拖拽调整位置**：可自由拖拽收藏夹位置，方便查看
-
-* 暂不支持：专业课界面的红黑榜查询
+- **随时管理**： 收藏夹不受选课开放时间影响，随时随地都可以管理收藏夹
 
 ### 使用指南
 
@@ -64,14 +63,20 @@ NJUxkHelper/
 │   └── 2025.json
 ├── normalized_data/      # 标准化数据文件
 │   └── 2020.json
-|   └── 2021.json
-|   └── 2023.json
-|   └── 2024.json
-|   └── 2024_new.json
-|   └── 2025.json
+│   └── 2021.json
+│   └── 2023.json
+│   └── 2024.json
+│   └── 2024_new.json
+│   └── 2025.json
 ├── README.md              # 项目说明（发布时不包含）
 ├── icons/               # 图标文件
-└── test/               # 测试文件（发布时不包含）
+└── test/                # 测试文件（发布时不包含）
+    └── Dockerfile
+    └── index.html 
+    └── package-lock.json
+    └── package.json  
+    └── run_test.js  
+    └── serve_only.js
 ```
 
 ## 环境要求
@@ -83,20 +88,24 @@ NJUxkHelper/
 本扩展使用的课程评价数据来源于：
 - [历年红黑榜](https://table.nju.edu.cn/external-apps/7aded834-74a2-43cc-b515-fb8e01656ef2/?page_id=zI1D)
 
-## 贡献指南
+## 贡献与测试
 
 欢迎为项目贡献代码！
 
-1. Fork 本项目
-2. 创建功能分支：`git checkout -b feature/AmazingFeature`
-3. 提交更改：`git commit -m 'Add some AmazingFeature'`
-4. 推送到分支：`git push origin feature/AmazingFeature`
-5. 提交Pull Request
-* 测试文件位于 `test/` 目录，可用于本地调试
+可以使用我们提供的docker测试文件进行本地测试。使用方法如下：
+
+在项目根目录下构建镜像并运行
+
+```
+docker build -f test/Dockerfile -t njuxkhelper-test .
+docker run --rm -v "$PWD":/app -p 8000:8000 njuxk-test node serve_only.js
+```
+
+然后在本地浏览器打开`http://localhost:8000/test/index.html`即可。
 
 ## 联系方式
 
-- **邮箱**：tye9872256@outlook.com
+- **邮箱**： tye9872256@outlook.com
 - **GitHub**：https://github.com/huaji-tye2007/NJUxkHelper-dev
 - **问题反馈**：https://github.com/huaji-tye2007/NJUxkHelper-dev/issues
 

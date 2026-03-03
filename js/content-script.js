@@ -165,14 +165,73 @@ function enhanceRow(row) {
 }
 
 /* =========================
+   JXB Item Enhancement Logic
+   (for program-course / 选课方案 page)
+========================= */
+
+function enhanceJxbItem(jxbItem) {
+  // 幂等保护
+  if (jxbItem.dataset.enhanced === "true") return;
+  jxbItem.dataset.enhanced = "true";
+
+  const titleSpan = jxbItem.querySelector(".head .jxb-title");
+  if (!titleSpan) return;
+
+  const teacherName = titleSpan.textContent.trim();
+  if (!teacherName) return;
+
+  // 从上层容器获取课程编号
+  const container = jxbItem.closest(".course-jxb-container");
+  if (!container) return;
+  const courseNumber = container.dataset.coursenumber;
+
+  // 用课程编号反查对应的 course-tr 行，获取课程名称
+  let courseName = "";
+  if (courseNumber) {
+    const courseRow = document.querySelector(
+      `tr.course-tr[data-coursenumber="${courseNumber}"] td.kcmc`
+    );
+    if (courseRow) {
+      // 取纯文本（可能已经被 enhanceRow 改成了链接）
+      const link = courseRow.querySelector("a");
+      courseName = link ? link.textContent.trim() : courseRow.textContent.trim();
+    }
+  }
+
+  // 将教师名替换为可点击链接
+  titleSpan.textContent = "";
+  const teacherLink = createLink(teacherName, (e) => {
+    const rect = e.currentTarget && e.currentTarget.getBoundingClientRect();
+    console.log('[content-script] JXB teacher click:', { courseName, teacherName, mouseX: e.clientX, mouseY: e.clientY });
+    notifyInfoPanel({
+      courseName,
+      teacherName,
+      allTeachers: [teacherName],
+      clickon: "teacher",
+      mouseX: e.clientX,
+      mouseY: e.clientY,
+      rect: rect ? { left: rect.left, top: rect.top, right: rect.right, bottom: rect.bottom, width: rect.width, height: rect.height } : null
+    });
+  });
+  titleSpan.appendChild(teacherLink);
+}
+
+/* =========================
    Table Scan
 ========================= */
 
 function enhanceCourseTable() {
+  // 原有：处理 course-tr 行（课程名+教师名列）
   const rows = document.querySelectorAll(
     "tr.course-tr:not([data-enhanced])"
   );
   rows.forEach(enhanceRow);
+
+  // 新增：处理教学班卡片（选课方案页面）
+  const jxbItems = document.querySelectorAll(
+    ".course-jxb-container-tr .jxb-item:not([data-enhanced])"
+  );
+  jxbItems.forEach(enhanceJxbItem);
 }
 
 /* =========================
