@@ -1,0 +1,2 @@
+# Privacy Policy for NJUxkHelper
+This extension does not collect, store, or transmit any personal data. It only reads course-related information on the NJU course selection website to provide historical comments data. All user data are stored locally on the user's device using the Chrome Storage API and are never sent to any public or private server in any form.
