@@ -1,9 +1,9 @@
 // NJU选课助手 - Popup页面脚本
 document.addEventListener('DOMContentLoaded', function () {
     // GitHub仓库链接 
-    const REPO_URL = 'https://github.com/tye2007/NJUxkHelper';
-    const ISSUES_URL = 'https://github.com/tye2007/NJUxkHelper/issues';
-    const README_URL = 'https://github.com/tye2007/NJUxkHelper/README.md';
+    const REPO_URL = 'https://github.com/huaji-tye2007/NJUxkHelper-dev';
+    const ISSUES_URL = 'https://github.com/huaji-tye2007/NJUxkHelper-dev/issues';
+    const README_URL = 'https://github.com/huaji-tye2007/NJUxkHelper-dev/README.md';
 
     // 获取链接元素
     const aboutLink = document.getElementById('about-link');
