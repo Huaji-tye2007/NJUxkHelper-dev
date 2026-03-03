@@ -15,7 +15,7 @@ We do not have access to your personal information, school credentials, or any o
 The extension requests the minimum permissions necessary to function:
 - **Storage**: Used to save your favorite courses locally on your device.
 - **ActiveTab**: Used to inject the evaluation panel and favorites bar into the course selection page.
-- **Host Permissions (https://xk.nju.edu.cn/)**: Required to read course and instructor names from the official NJU course selection website to provide relevant historical evaluations.
+- **Host Permissions**: Required to read course and instructor names from the official NJU course selection website to provide relevant historical evaluations.
 
 ## Third-Party Services
 NJUxkHelper does not share any data with third-party services, advertisers, or analytics providers.
