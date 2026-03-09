@@ -7,15 +7,13 @@ NJUxkHelper ("we", "our", or "us") is committed to protecting your privacy. This
 We do not collect any personal information.
 
 NJUxkHelper operates entirely within your browser. All data managed by the extension (such as your favorite course lists) is stored:
-- **Locally on your device** using `chrome.storage.local`.
+- **Locally on your device** using the browser's local storage (`window.localStorage`).
 
 We do not have access to your personal information, school credentials, or any other private data. We do not track your browsing history or transmit any data to external servers. All evaluation data is bundled within the extension package.
 
 ## Permissions
 The extension requests the minimum permissions necessary to function:
-- **Storage**: Used to save your favorite courses locally on your device.
-- **ActiveTab**: Used to inject the evaluation panel and favorites bar into the course selection page.
-- **Host Permissions**: Required to read course and instructor names from the official NJU course selection website to provide relevant historical evaluations.
+- **Host Permissions** (`https://xk.nju.edu.cn/*`): Required to run the extension's content scripts on the official NJU course selection pages so the extension can read course and instructor names and display bundled historical evaluation data in-page.
 
 ## Third-Party Services
 NJUxkHelper does not share any data with third-party services, advertisers, or analytics providers.

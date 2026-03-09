@@ -3,10 +3,6 @@
     "name": "南京大学选课小助手",
     "version": "1.0.0",
     "description": "为南京大学学生提供课程评价信息，帮助更好地选择课程",
-    "permissions": [
-        "storage",
-        "activeTab"
-    ],
     "host_permissions": [
         "https://xk.nju.edu.cn/*"
     ],
