@@ -1,0 +1,48 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE, GIT and Editor Files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.settings
+.classpath
+.git/
+
+# Opencode-related
+AGENTS.md
+SKILL.md
+.opencode/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Build artifacts (if any exist)
+dist/
+build/
+coverage/
+
+# Test output
+.nyc_output/
+*.lcov
+test-results/
